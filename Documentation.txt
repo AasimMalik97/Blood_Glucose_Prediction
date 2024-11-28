@@ -1,0 +1,60 @@
+Blood Glucose Prediction and Analysis
+1. Introduction
+The goal of this project is to analyze and predict blood glucose levels using various features derived from the provided dataset. This project explores patterns in blood glucose trends and employs predictive modeling to forecast glucose levels, which is critical for managing diabetes and related conditions.
+
+Objectives:
+Perform data preprocessing and exploratory data analysis (EDA) to uncover patterns in the dataset.
+Implement machine learning models to predict future blood glucose levels based on historical data.
+Evaluate the models and draw actionable insights.
+2. Dataset
+The dataset consists of features related to:
+
+Blood Glucose Levels (bg): Recorded at various time intervals.
+Insulin Levels (insulin): Averaged over defined periods.
+Carbohydrate Intake (carbs): Averaged over defined periods.
+Other physiological parameters: Such as steps and calorie intake.
+Key Statistics:
+Number of features: 73 (reduced post-processing)
+Number of rows: [to be filled]
+Target variable: bg+1:00 (blood glucose level one hour after the last recorded interval)
+3. Hypotheses
+Blood glucose levels are influenced by insulin, carbohydrate intake, and physical activity.
+Averaging these features over specified time intervals will improve prediction accuracy.
+4. Techniques Used
+Data Preprocessing
+Handling Missing Values: Missing values in the dataset were replaced with zeros to retain all data points.
+Feature Engineering:
+Averaging features over 5, 4, 3, 2, and 1-hour intervals.
+Dropping redundant and irrelevant columns.
+Exploratory Data Analysis
+Correlation heatmaps to identify relationships between features.
+Summary statistics and visualizations to understand data distributions.
+Predictive Modeling
+Linear Regression Model:
+Features used: Aggregated averages for blood glucose, insulin, carbs, and activity.
+Target: bg+1:00.
+Performance Metrics:
+Mean Squared Error (MSE): 6.06
+R-squared: 0.33
+Cross-validation MSE: 6.49
+Feature Scaling: StandardScaler was used to normalize features.
+5. Results
+The predictive model demonstrated moderate accuracy, with an R-squared value indicating that ~33% of the variance in blood glucose levels was explained by the model.
+Cross-validation results showed consistent MSE across folds.
+6. Conclusion
+The project highlights the importance of feature engineering in improving the predictability of physiological data. While the model's performance is a good starting point, future work could explore:
+
+Advanced algorithms like Random Forest or Neural Networks.
+Incorporating more detailed activity or diet data.
+Using time-series analysis for sequential dependencies.
+7. Tools and Libraries
+Python 3.13.0
+Libraries: pandas, numpy, seaborn, matplotlib, scikit-learn
+8. Future Work
+Enhance the dataset by integrating external sources like continuous glucose monitors.
+Implement hyperparameter tuning to optimize the model's performance.
+Explore clustering techniques to identify unique patterns among different users.
+Deliverables:
+Code: The .ipynb files provided.
+Documentation: This document.
+Presentation: Slides summarizing the objectives, methodology, and results.
